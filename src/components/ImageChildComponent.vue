@@ -2,11 +2,11 @@
   <div>
     <!-- OK時の画像 -->
     <div
-      v-if="getUrl()"
+      v-if="url"
     >
       <h2>OK!!!</h2>
       <img
-        :src="getUrl()"
+        :src="childUrl"
         width=200
       >
     </div>
@@ -31,39 +31,40 @@ export default {
       default: "",
     },
   },
-  // data() {
-  //   return {
-  //     childUrl: '',
-  //   }
-  // },
+  data() {
+    return {
+      childUrl: '',
+    }
+  },
   beforeCreate() {
-    // console.log('beforeCreate: ', this.url);
+    console.log('beforeCreate: ', this.url);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
-    // this.$emit("replace", newUrl);
+    // this.childUrl = newUrl;
   },
   created() {
     console.log('created: ', this.url);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
-    // this.$emit("replace", newUrl);
+    // this.childUrl = newUrl;
     // console.log('created: ', this.url);
   },
   beforeMount() {
     console.log('beforeMount: ', this.url);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
-    // this.$emit("replace", newUrl);
+    // this.childUrl = newUrl;
     // console.log('beforeMount: ', this.url);
   },
   mounted() {
     console.log('mounted: ', this.url);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
-    // this.$emit("replace", newUrl);
+    // this.childUrl = newUrl;
+    // console.log('mounted: ', this.url);
   },
   methods: {
     getUrl() {
       console.log('methods(getUrl): ', this.url);
-      const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
-      this.$emit("replace", newUrl);
-      return this.url;
+      // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
+      // this.childUrl = newUrl;
+      // return this.childUrl;
     }
   }
 }
