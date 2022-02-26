@@ -2,11 +2,11 @@
   <div>
     <!-- OK時の画像 -->
     <div
-      v-if="url"
+      v-if="getUrl()"
     >
       <h2>OK!!!</h2>
       <img
-        :src="childUrl"
+        :src="getUrl()"
         width=200
       >
     </div>
@@ -37,31 +37,30 @@ export default {
     }
   },
   beforeCreate() {
-    console.log('beforeCreate: ', this.url);
+    // console.log('beforeCreate: ', this.childUrl);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
     // this.childUrl = newUrl;
   },
   created() {
-    console.log('created: ', this.url);
+    console.log('created: ', this.childUrl);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
     // this.childUrl = newUrl;
-    // console.log('created: ', this.url);
   },
   beforeMount() {
-    console.log('beforeMount: ', this.url);
+    console.log('beforeMount: ', this.childUrl);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
     // this.childUrl = newUrl;
-    // console.log('beforeMount: ', this.url);
+    // console.log('beforeMount: ', this.childUrl);
   },
   mounted() {
-    console.log('mounted: ', this.url);
+    console.log('mounted: ', this.childUrl);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
     // this.childUrl = newUrl;
-    // console.log('mounted: ', this.url);
+    // console.log('mounted: ', this.childUrl);
   },
   methods: {
     getUrl() {
-      console.log('methods(getUrl): ', this.url);
+      // console.log('methods(getUrl): ', this.childUrl);
       // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
       // this.childUrl = newUrl;
       // return this.childUrl;
