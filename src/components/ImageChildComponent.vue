@@ -2,11 +2,11 @@
   <div>
     <!-- OK時の画像 -->
     <div
-      v-if="getUrl()"
+      v-if="childUrl"
     >
       <h2>OK!!!</h2>
       <img
-        :src="getUrl()"
+        :src="childUrl"
         width=200
       >
     </div>
@@ -37,14 +37,16 @@ export default {
     }
   },
   beforeCreate() {
-    // console.log('beforeCreate: ', this.childUrl);
+    console.log('beforeCreate: ', this.childUrl);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
     // this.childUrl = newUrl;
+    // console.log('beforeCreate: ', this.childUrl);
   },
   created() {
     console.log('created: ', this.childUrl);
     // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
     // this.childUrl = newUrl;
+    // console.log('created: ', this.childUrl);
   },
   beforeMount() {
     console.log('beforeMount: ', this.childUrl);
@@ -60,7 +62,7 @@ export default {
   },
   methods: {
     getUrl() {
-      // console.log('methods(getUrl): ', this.childUrl);
+      console.log('methods(getUrl): ', this.childUrl);
       // const newUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
       // this.childUrl = newUrl;
       // return this.childUrl;
