@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <ImageParentComponent>
-    </ImageParentComponent>
+    <BarChart />
   </div>
 </template>
 
 <script>
-import ImageParentComponent from './components/ImageParentComponent.vue'
+import BarChart from './components/ChartComponent'
 
 export default {
   name: 'App',
   components: {
-    ImageParentComponent,
-  },
+    BarChart
+  }
 }
 </script>
 
