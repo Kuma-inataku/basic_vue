@@ -9,6 +9,10 @@
         :src="childUrl"
         width=200
       >
+      <img
+        :src="childUrl"
+        width=200
+      >
     </div>
     <!-- NG時の画像 -->
     <div
